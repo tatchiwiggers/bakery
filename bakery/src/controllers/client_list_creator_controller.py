@@ -10,7 +10,7 @@ class ClientListCreator:
         except Exception as exception:
             return {'success': False, 'error': str(exception)}
 
-    def __get_all_clients(self) -> List:
+    def get_all_clients(self) -> List:
         clients = client_repository.return_all_clients()
         if clients is []: raise Exception('No registred clients')
         return clients
